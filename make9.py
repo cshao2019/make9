@@ -6,6 +6,7 @@ response = raw_input("Your score is " + str(score) + ". Do you want more points?
 while response == "yes":
 	points = random.uniform(0.0,3.0)
 	score = score + points
+	score = round(score,1)
 	#need this condition because if score is >9, cannot show this message
 	#essentially first comparing the new score with 9 to determine to show below message or not
 	if score < 9: 
@@ -16,6 +17,7 @@ while response == "yes":
 	else:
 		print("Your score is " + str(score) + ". Since it is over 9, you lose!")
 		exit() #won't have the infinite loop
+
 
 if response != "yes": #no
 	if score == 9:
